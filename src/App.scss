@@ -60,3 +60,40 @@
     flex-wrap: wrap;
   }
 }
+
+.card {
+  width: calc(100% / 5 - 10px);
+  margin: 5px;
+  margin-bottom: 50px;
+  background-color: #7895B2;
+  border-radius: 5px;
+
+  img {
+    height: 180px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .text {
+    text-align: center;
+
+    .name,
+    .status,
+    .species {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .name {
+      color: white;
+    }
+
+    .status,
+    .species {
+      color: #C9D6DF;
+    }
+  }
+
+
+
+}
