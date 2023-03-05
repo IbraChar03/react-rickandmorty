@@ -17,7 +17,7 @@ function Main() {
     return (
         <>
             <div className="characters">
-                <input type="text" onChange={(e) => setQuery(e.target.value)} />
+                <input type="text" onChange={(e) => setQuery(e.target.value)} placeholder="Write a name.." />
             </div>
             <section className="main">
                 <div className="container">
