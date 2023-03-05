@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import Card from './Card.js'
 import axios from 'axios'
 function Main() {
-    const [Data, setData] = useState([])
+    const [query, setQuery] = useState("")
+
+    const [data, setData] = useState([])
+
     // let arrayCards = []
     useEffect(() => {
         axios.get('https://rickandmortyapi.com/api/character')
@@ -14,16 +17,13 @@ function Main() {
     return (
         <>
             <div className="characters">
-                <div className="number">
-
-                </div>
+                <input type="text" onChange={(e) => setQuery(e.target.value)} />
             </div>
             <section className="main">
                 <div className="container">
 
                     <div className="cont-cards">
-                        {Data.map((card, index) => (
-
+                        {data.filter(card => card.name.toLowerCase().includes(query)).map((card, index) => (
                             <Card card={card} key={index} />
                         ))}
 
